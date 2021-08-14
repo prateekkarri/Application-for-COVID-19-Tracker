@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "covid-19-tracker-prateek": {
+      "hosting": {
+        "covidtracker": [
+          "covid-19-tracker-prateek"
+        ]
+      }
+    }
+  }
+}

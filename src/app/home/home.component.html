@@ -1,0 +1,65 @@
+<h1>Global Data</h1>
+
+<div class="wrapper d-flex align-items-stretch">
+  <div id="content" class="p-4 p-md-5">
+    <div class="container">
+      <div class="cards-list">
+
+
+        <div class="card 4" (click)="updateChart('c')">
+          <div class="card_image">
+            <img src="../../assets/images/dashboardtiles/Confirmed.jpg" />
+          </div>
+          <div class="card_title title-white">
+            <p style="color: wheat;">CONFIRMED: {{Confirmed}}</p>
+
+          </div>
+        </div>
+
+
+        <div class="card 4" (click)="updateChart('r')">
+          <div class="card_image">
+            <img src="../../assets/images/dashboardtiles/Recovered.jpg" />
+          </div>
+          <div class="card_title title-white">
+            <p style="color:wheat;">RECOVERED: {{Recovered}}</p>
+
+          </div>
+        </div>
+
+
+
+        <div class="card 4" (click)="updateChart('d')">
+          <div class="card_image">
+            <img src="../../assets/images/dashboardtiles/Deaths.jpg" />
+          </div>
+          <div class="card_title title-white">
+            <p style="color: wheat;">DEATHS:{{Deaths}}</p>
+            <P></P>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+<div class="row">
+  <div class="col">
+    <google-chart [type]='chart.PieChart' [options]='chart.options' style="width: 100%;" [height]='chart.height'
+      [data]='datatable'></google-chart>
+  </div>
+  <div class="col">
+    <google-chart [type]='chart.BarChart' style="width: 100%;" [options]='chart.options' [height]='chart.height'
+      [data]='datatable'></google-chart>
+  </div>
+
+  <!-- <div class="col">
+      <google-chart [type]='chart.LineChart' style="width: 100%;" [options]='chart.options' [height]='chart.height' [data]='datatable'></google-chart>
+  </div> -->
+</div>

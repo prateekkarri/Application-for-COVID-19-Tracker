@@ -1,0 +1,17 @@
+<div class="mx-auto">
+  <h1>Countrywise Data</h1>
+  <div class="form-group col-lg-5 mx-auto">
+    <label for="c">Select Country</label>
+    <select name="" class="form-control" id="c" #input (change)='updateValues(input.value)'>
+      <option value="{{contry}}" *ngFor='let contry of countries'>{{contry}}</option>
+    </select>
+  </div>
+</div>
+
+<app-cards [Confirmed]='Confirmed' [Active]='Active' [Recovered]='Recovered' [Deaths]='Deaths'></app-cards>
+
+
+<div class="col">
+  <google-chart [type]='chart.LineChart' style="width: 100%;" [options]='chart.options' [height]='chart.height'
+    [data]='datatable'></google-chart>
+</div>
